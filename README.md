@@ -10,7 +10,7 @@ Korean guide: [README.ko.md](README.ko.md)
 
 (1) Pull Docker Image
 ```bash
-docker pull --platform linux/amd64 team12/adastra:0.1.0
+docker pull --platform linux/amd64 michaelajh/team12_adastra:0.1.0
 ```
 
 (2) Run the app
