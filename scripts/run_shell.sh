@@ -23,6 +23,7 @@ docker run --rm -it \
     /usr/share/novnc/utils/novnc_proxy --vnc localhost:5900 --listen 6080 &
 
     chmod +x /workspace/build/main || true
+    ln -sfn ../assets /workspace/build/assets
 
     echo ""
     echo "=========================================="
