@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-IMAGE_NAME="team12/adastra:0.1.0"
+IMAGE_NAME="michaelajh/team12_adastra:0.1.0"
 CONTAINER_NAME="team12-adastra-gui-container"
 
 docker run --rm -it \

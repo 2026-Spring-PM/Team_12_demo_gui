@@ -10,7 +10,7 @@ English guide: [README.md](README.md)
 
 (1) Docker 이미지 받기
 ```bash
-docker pull --platform linux/amd64 team12/adastra:0.1.0
+docker pull --platform linux/amd64 michaelajh/team12_adastra:0.1.0
 ```
 
 (2) 게임 실행
