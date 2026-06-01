@@ -20,7 +20,13 @@ docker run --rm -it \
 
     openbox &
     x11vnc -display :99 -forever -shared -rfbport 5900 -nopw &
-    /usr/share/novnc/utils/novnc_proxy --vnc localhost:5900 --listen 6080 &
+    if [ -x /usr/share/novnc/utils/novnc_proxy ]; then
+      /usr/share/novnc/utils/novnc_proxy --vnc localhost:5900 --listen 6080 &
+    elif command -v websockify >/dev/null 2>&1; then
+      websockify --web=/usr/share/novnc 6080 localhost:5900 &
+    else
+      echo "WARNING: noVNC proxy not found; use a VNC client on localhost:5900"
+    fi
 
     chmod +x /workspace/build/main || true
     ln -sfn ../assets /workspace/build/assets
